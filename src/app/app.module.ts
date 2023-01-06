@@ -1,5 +1,6 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRouterModule } from './app-router.module';
@@ -14,7 +15,13 @@ registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRouterModule, SalesModule, SharedModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRouterModule,
+    SalesModule,
+    SharedModule,
+  ],
   providers: [{ provide: LOCALE_ID, useValue: 'es-CL' }],
   bootstrap: [AppComponent],
 })
