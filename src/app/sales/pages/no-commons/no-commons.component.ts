@@ -23,4 +23,13 @@ export class NoCommonsComponent {
     '=2': 'tenemos dos clientes esperando.',
     other: 'tenemos # clientes esperando.',
   };
+
+  changeClient() {
+    this.name = 'Juan';
+    this.gender = 'male';
+  }
+
+  removeClient() {
+    this.clients.pop();
+  }
 }
