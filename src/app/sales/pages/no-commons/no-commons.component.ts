@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-commons',
@@ -32,4 +33,36 @@ export class NoCommonsComponent {
   removeClient() {
     this.clients.pop();
   }
+
+  // KeyValue Pipe
+  person = {
+    name: 'Manuel',
+    age: 38,
+    address: 'Villa Alemana, Chile',
+  };
+
+  // Json Pipe
+  heroes = [
+    {
+      name: 'Superman',
+      fly: true,
+    },
+    {
+      name: 'Robin',
+      fly: false,
+    },
+    {
+      name: 'Aquaman',
+      fly: false,
+    },
+  ];
+
+  // Async Pipe
+  myObservable = interval(1000);
+
+  promiseValue = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data from promise');
+    }, 3500);
+  });
 }
