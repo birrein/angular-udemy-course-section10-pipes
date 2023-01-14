@@ -7,6 +7,7 @@ import { NumbersComponent } from './pages/numbers/numbers.component';
 import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
+import { CapitalizePipe } from './pipes/capital.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { OrderComponent } from './pages/order/order.component';
     NoCommonsComponent,
     BasicsComponent,
     OrderComponent,
+    CapitalizePipe
   ],
   exports: [
     NumbersComponent,

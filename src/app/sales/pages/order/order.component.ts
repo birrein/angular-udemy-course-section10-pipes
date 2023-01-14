@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order.component.sass']
 })
 export class OrderComponent implements OnInit {
+  inUppercase: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  capitalizeToggle() {
+    this.inUppercase = !this.inUppercase;
+  }
 }
