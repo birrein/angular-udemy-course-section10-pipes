@@ -1,6 +1,39 @@
 <div class="text-layout">
   <h1>Pipes personalizados</h1>
   <pre> {{ 'texto' | capitalize:inUppercase }} </pre>
+</div>
 
-  <button pButton type="button" label="Capitalize toggle" (click)="capitalizeToggle()"></button>
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+  </div>
+
+  <div class="p-toolbar-group-end">
+    <button pButton type="button" label="Capitalize toggle" (click)="capitalizeToggle()"
+      class="mr-1 p-button-warning"></button>
+    <button pButton label="Por nombre" icon="pi pi-sort" class="mr-1"></button>
+    <button pButton label="Valores" icon="pi pi-sort" class="mr-1 p-button-success"></button>
+    <button pButton label="Por color" icon="pi pi-sort" class="mr-1 p-button-danger"></button>
+  </div>
+</p-toolbar>
+
+<div class="grid">
+  <div class="col mt-2">
+    <p-table [value]="heroes">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Nombre</th>
+          <th>Vuela</th>
+          <th>Color</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-heroe>
+        <tr>
+          <td>{{heroe.name}}</td>
+          <td>{{heroe.fly | fly | titlecase}}</td>
+          <td>{{heroe.color}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+  </div>
 </div>
