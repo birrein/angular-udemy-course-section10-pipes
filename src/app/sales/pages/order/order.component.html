@@ -11,14 +11,14 @@
     <button pButton type="button" label="Capitalize toggle" (click)="capitalizeToggle()"
       class="mr-1 p-button-warning"></button>
     <button pButton label="Por nombre" icon="pi pi-sort" class="mr-1"></button>
-    <button pButton label="Valores" icon="pi pi-sort" class="mr-1 p-button-success"></button>
+    <button pButton label="Vuela" icon="pi pi-sort" class="mr-1 p-button-success"></button>
     <button pButton label="Por color" icon="pi pi-sort" class="mr-1 p-button-danger"></button>
   </div>
 </p-toolbar>
 
 <div class="grid">
   <div class="col mt-2">
-    <p-table [value]="heroes">
+    <p-table [value]="heroes | order">
       <ng-template pTemplate="header">
         <tr>
           <th>Nombre</th>

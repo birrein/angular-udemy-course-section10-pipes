@@ -9,6 +9,7 @@ import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
 import { CapitalizePipe } from './pipes/capital.pipe';
 import { FlyPipe } from './pipes/fly.pipe';
+import { OrderPipe } from './pipes/order.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FlyPipe } from './pipes/fly.pipe';
     OrderComponent,
     CapitalizePipe,
     FlyPipe,
+    OrderPipe,
   ],
   exports: [
     NumbersComponent,
