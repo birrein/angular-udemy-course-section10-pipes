@@ -8,6 +8,8 @@ import { Color, Heroe } from '../../interfaces/sales.interfaces';
 })
 export class OrderComponent {
   inUppercase: boolean = false;
+  orderBy: string = '';
+
   heroes: Heroe[] = [
     {
       name: 'Superman',
@@ -38,5 +40,9 @@ export class OrderComponent {
 
   capitalizeToggle() {
     this.inUppercase = !this.inUppercase;
+  }
+
+  changeOrder(orderBy: string) {
+    this.orderBy = orderBy;
   }
 }
